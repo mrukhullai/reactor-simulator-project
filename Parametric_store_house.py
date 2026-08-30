@@ -7,7 +7,7 @@ def numeric_converter(t):
         try:
             s=float(t)
             round(s,2)
-            
+            return s
             break
         except:
             print("Error\nInput not a numeric value")
@@ -16,16 +16,20 @@ def numeric_converter(t):
         if counter == 10:
             print("Errors made too many")
             break
-            return s
-        
-# def arraying(t):
-#     l_a=[]
-#     values = t.strip().split(" ")
-#     print(values)
-#     np.array(map(numeric_converter,values))
-#     print("array",a)
-#     # f=numeric_converter(a)
-#     # print(f)
+    return None
+def arraying(t):
+    l_a=[]
+    values = t.strip().split(" ")
+    print(values)
+    a = np.array(list(map(numeric_converter,values)))
+    print("array",a)
+    # f=numeric_converter(a)
+    # print(f)
+    return a
+
+Mass = "10 20 30 40 "
+print(arraying(Mass))
+
 
 # Mass = "10 20 30 40 "
 # arraying(Mass)
