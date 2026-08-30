@@ -199,9 +199,7 @@ class Reactor(safety_parameters):
         self.k = k
 
     def loss(self, x):
-        return self.t_enviroment + (self.temperature - self.t_enviroment) * math.exp(
-            -self.k * x
-        )
+        return self.t_enviroment + (self.temperature - self.t_enviroment) * math.exp(-self.k * x)
 
     # inputting functions to add and drain chemicals from the reactor
     def add_Chem(self):

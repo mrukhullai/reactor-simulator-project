@@ -1,5 +1,6 @@
 import numpy as np
 import math as mt
+import time
 def numeric_converter(t):
     counter = 0
 
@@ -18,7 +19,7 @@ def numeric_converter(t):
             break
     return None
 def arraying(t):
-    l_a=[]
+    # l_a=[]
     values = t.strip().split(" ")
     print(values)
     a = np.array(list(map(numeric_converter,values)))
@@ -27,9 +28,41 @@ def arraying(t):
     # print(f)
     return a
 
-Mass = "10 20 30 40 "
-print(arraying(Mass))
-
-
 # Mass = "10 20 30 40 "
 # arraying(Mass)
+
+class safety_parameters:
+    def __init__(self, name, quantity, temp, env_temp, chem_max_temp,chem_min_temp,mode):
+        self.name = name
+        self.quantity = quantity
+        self.temp = temp
+        self.env = env_temp
+        self.max_cap = 1000
+        self.max_temp = 1000
+        self.min_temp = -300
+        self.chem_max_temp = None
+        self.chem_min_temp = None
+        
+        if mode == (1 or 2):
+            self.chem_max_temp = chem_max_temp
+            self.chem_min_temp = chem_min_temp
+        
+    
+    def safety_check(self):
+        timer = 0
+        
+# Adding safety check for chemical quantity in tank
+
+        def emergency_dedeucter():
+            Em_drain_stopwatch = 0
+            removal_rate = 50
+            print("---Emergency Removal Initialized---")
+            self.quantity -= removal_rate
+            Em_drain_stopwatch += 1
+            print(f"Time:{Em_drain_stopwatch} current volume is now {self.quantity}Litres")
+            
+        def emergency_temp_alternator():
+            if self.temp > self.chem_max_temp:
+                print("Emergency cooler initialized")
+                
+        
