@@ -37,6 +37,18 @@ log_handle = log_file.open("w", encoding="utf-8")
 original_stdout = sys.stdout
 sys.stdout = Tee(original_stdout, log_handle)
 
+original_input = input
+
+
+def logged_input(prompt=""):
+    value = original_input(prompt)
+    log_handle.write(f"Input: {value}\n")
+    log_handle.flush()
+    return value
+
+
+input = logged_input
+
 print(f"Logging to: {log_file}")
 
 # addressing modes
