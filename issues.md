@@ -1,4 +1,4 @@
-# Code ERROR's
+# Code ERRORs
 
 ## Recent issue
 
@@ -74,4 +74,4 @@ arraying(Mass)
 This modification clears up the error and the end result of a test using the `tester.ipynb`nfie proves this
 
 - **Note**:
-When working with externel files content in a jupyter notebook please ensure to restart the kernel once any remodification is made to the external file as the notebook wont recognise it otherwise.
+When working with externel files content in a jupyter notebook please ensure to restart the kernel once any modification is made to the external file as the notebook wont recognise it otherwise.
