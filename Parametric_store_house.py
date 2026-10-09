@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 import math as mt
 import time
 def numeric_converter(t):
@@ -18,15 +18,15 @@ def numeric_converter(t):
             print("Errors made too many")
             break
     return None
-def arraying(t):
-    # l_a=[]
-    values = t.strip().split(" ")
-    print(values)
-    a = np.array(list(map(numeric_converter,values)))
-    print("array",a)
-    # f=numeric_converter(a)
-    # print(f)
-    return a
+# def arraying(t):
+#     # l_a=[]
+#     values = t.strip().split(" ")
+#     print(values)
+#     a = np.array(list(map(numeric_converter,values)))
+#     print("array",a)
+#     # f=numeric_converter(a)
+#     # print(f)
+#     return a
 
 # Mass = "10 20 30 40 "
 # arraying(Mass)
