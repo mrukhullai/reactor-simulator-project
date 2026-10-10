@@ -7,7 +7,7 @@ from pathlib import Path
 from pdb import run
 from scipy.integrate import quad
 
-from Reactor_6 import LatentHeat_of_vaporisation
+from Reactor_background.Reactor_6 import LatentHeat_of_vaporisation
 
 
 class Tee:
